@@ -27,11 +27,8 @@
 				</div>
 				<div class="ui-grid-col-2">
 					<h:inputText value="#{userManagement.actualUser.username}"
-						id="username" required="true" autocomplete="false"
-						validator="#{userManagement.validateUserExists}">
-						<f:ajax event="blur" render="usernameError" />
+						id="username" >
 					</h:inputText>
-					<h:message for="username" errorClass="invalid" id="usernameError" />
 				</div>
 			</div>
 			<br />
@@ -43,10 +40,9 @@
 				</div>
 				<div class="ui-grid-col-2">
 					<h:inputSecret value="#{userManagement.actualUser.password}"
-						id="password" required="true" autocomplete="false">
-						<f:ajax event="blur" render="passwordError" />
+						id="password" >
 					</h:inputSecret>
-					<h:message for="password" errorClass="invalid" id="passwordError" />
+					<!-- dodaj komponent message -->
 				</div>
 			</div>
 			<br />
@@ -57,11 +53,9 @@
 					<h:outputText value="Repeat password:" />
 				</div>
 				<div class="ui-grid-col-2">
-					<h:inputSecret id="password2" required="true" autocomplete="false"
-						validator="#{userManagement.validateSamePassword}">
-						<f:ajax event="blur" render="passwordError2" />
+					<h:inputSecret id="password2" >
 					</h:inputSecret>
-					<h:message for="password2" errorClass="invalid" id="passwordError2" />
+					<!-- dodaj komponent message -->
 				</div>
 			</div>
 			<br />

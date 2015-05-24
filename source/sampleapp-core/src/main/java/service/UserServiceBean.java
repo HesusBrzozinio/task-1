@@ -77,10 +77,8 @@ public class UserServiceBean implements UserServiceLocal {
 	@Override
 	public boolean exists(final String username) {
 		try {
-			final String jpql = "SELECT COUNT(u) FROM User u WHERE u.name = :name";
-			final Long number = manager.createQuery(jpql, Long.class)
-					.setParameter("name", username).getSingleResult();
-			return number > 0;
+			
+			return true;
 		} catch (final Exception ex) {
 			LOG.error("username check error for name={}", username, ex);
 			return true;

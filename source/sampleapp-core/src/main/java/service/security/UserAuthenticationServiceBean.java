@@ -1,5 +1,6 @@
 package service.security;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -41,7 +42,7 @@ public class UserAuthenticationServiceBean implements
 			LOG.info("fetching active user: {}", username);
 
 
-			final List<UserRoleName> roles = Collections.emptyList();
+			final List<UserRoleName> roles = new ArrayList<>();
 			roles.add(UserRoleName.ADMIN);
 			roles.add(UserRoleName.BASIC);
 

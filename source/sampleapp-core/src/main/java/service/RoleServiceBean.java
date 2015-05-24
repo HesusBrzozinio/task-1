@@ -27,7 +27,7 @@ public class RoleServiceBean implements RoleServiceLocal {
 	@Override
 	public List<UserRoleName> getAllRoleNames() {
 		try {
-			final List<UserRoleName> roles = Collections.emptyList();
+			final List<UserRoleName> roles = new ArrayList<>();
 			roles.add(UserRoleName.ADMIN);
 			roles.add(UserRoleName.BASIC);
 			
